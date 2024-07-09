@@ -7,22 +7,25 @@ const Footer = () => {
     <div className='footer' id='footer'>
       <div className='footer-content'>
         <div className='footer-content-left'>
-            <img src={assets.logo} className='logo'/>
-            <div className='footer-social-icons'>
-              <img src={assets.twitter_icon} />
-              <img src={assets.instagram_icon} />
-              <img src={assets.youtube_icon} />
-              <img src={assets.whatsapp_icon} />
-            </div>
+          <img src={assets.logo} className='logo' />
+          <p>
+          Govardhan Farms is dedicated to delivering safe, hygienic, and healthy food to consumers. Govardhan Farms aims to create a sustainable and equitable ecosystem for farmers. 
+          </p>
+          <div className='footer-social-icons'>
+            <img src={assets.twitter_icon} />
+            <img src={assets.instagram_icon} />
+            <img src={assets.youtube_icon} />
+            <img src={assets.whatsapp_icon} />
+          </div>
         </div>
         <div className='footer-content-center'>
-            <h2>Company</h2>
-            <ul>
-              <li>Home</li>
-              <li>Product</li>
-              <li>About Us</li>
-              <li>Career</li>
-            </ul>
+          <h2>Company</h2>
+          <ul>
+            <li>Home</li>
+            <li>Product</li>
+            <li>About Us</li>
+            <li>Career</li>
+          </ul>
         </div>
         <div className='footer-content-right'>
           <h2>Contact Us</h2>
@@ -45,11 +48,13 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <hr/>
       <div className='footer-copyright'>
         <p>
           ©Govardhan Farms Post Harvest Care Ltd.
         </p>
-       </div>
+      </div>
+      <img src={assets.footer_bg} style={{width : "100%"}}/>
     </div>
   )
 }

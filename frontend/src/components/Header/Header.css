@@ -49,3 +49,23 @@
     font-size: larger;
     font-size: max(1vw,12px);
   }
+
+  @media (max-width:1050px) {
+      .header{
+      height: 38vw;
+      }
+
+      .header-contents {
+        max-width: 45%;
+       }
+  }
+
+  @media (max-width:750px) {
+    .header-contents {
+      max-width: 55%;
+     }
+
+     .header-contents p{
+     display: none;
+     }
+}
