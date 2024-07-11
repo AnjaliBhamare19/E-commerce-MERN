@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-const CNavbar = () => {
+const CNavbar = ({setShowLogin}) => {
   const [menu, setMenu] = useState("menu");
 
   return (
@@ -61,7 +61,9 @@ const CNavbar = () => {
               <img src={assets.basket_icon} alt="" />
               <div className="dot position-absolute top-0 start-100 translate-middle"></div>
             </div>
-            <Button variant="primary">Sign In</Button>
+            <Button variant="primary"
+              onClick={()=> setShowLogin(true)}
+            >Sign In</Button>
           </div>
         </Navbar.Collapse>
       </Container>

@@ -11,9 +11,9 @@ const App = () => {
   const [showLogin,setShowLogin] = useState(false);
   return (
     <>
-    {showLogin?<Login /> : <></>}
+    {showLogin?<Login setShowLogin={setShowLogin} /> : <></>}
     <div className='app'>
-      <CNavbar setShowLogin={setShowLogin}/>
+      <CNavbar setShowLogin = {setShowLogin}/>
       <Routes>
          <Route path='/' element= {<Home />}/>
          <Route path='/cart' element= {<Cart />}/>
