@@ -54,6 +54,7 @@
 }
 
 .food-item-counter{
+    width: 30%;
     position: absolute;
     bottom: 15px;
     right: 15px;
@@ -63,4 +64,8 @@
     gap: 10px;
     border-radius: 50px;
     background-color: rgb(255, 255, 255);
+}
+
+.food-item-counter p{
+   margin-top: 10px;
 }

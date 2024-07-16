@@ -1,8 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Cart.css'
 import { StoreContext } from '../../context/StoreContext'
 const Cart = () => {
-  const {cartItems,food_list,removeFromCart} = useContext(StoreContext);
+   const {food_list,removeFromCart} = useContext(StoreContext);
+  const [cartItems , setCartItem] = useState({});
+
+  useEffect(()=>{
+      let sesstionvalue = localStorage.getItem('cart-item');
+      setCartItem(JSON.parse(sesstionvalue));
+  },[])
   return (
     <div className='cart'>
       <div className='cart-items'>
@@ -17,7 +23,17 @@ const Cart = () => {
          <br />
          <hr />
          {food_list.map((item,index)=>{
-              if(cartItems[item._id]>0)
+            if(cartItems[item._id]>0)
+            {
+              
+              return(
+                <>
+                <div className='cart-items-title cart-items-item' >
+                   <p>{item.name}</p>
+                </div>
+                </>
+              )
+            }
          })}
       </div>
     </div>

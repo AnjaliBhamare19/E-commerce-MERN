@@ -6,19 +6,22 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-const CNavbar = ({setShowLogin}) => {
+const CNavbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary pt-0 pb-2" bg="light" data-bs-theme="light">
       <Container fluid>
-        <Navbar.Brand href="#">
-          <img
-            alt=""
-            src={assets.logo}
-            className="logo"
-          />
+        {/* logo */}
+        <Navbar.Brand href="/">
+            <img
+              alt=""
+              src={assets.logo}
+              className="logo"
+            />
         </Navbar.Brand>
+
+      {/* For Responsive website */}
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" className="justify-content-center">
           <Nav
@@ -55,15 +58,20 @@ const CNavbar = ({setShowLogin}) => {
               Contact
             </Nav.Link>
           </Nav>
+
           <div className="navbar-right d-flex align-items-center">
+
             <img src={assets.search_icon} alt="" className="me-2" />
+
             <div className="navbar-search-icon position-relative me-2">
-              <img src={assets.basket_icon} alt="" />
+              <Nav.Link href='/cart'><img src={assets.basket_icon} alt="" /></Nav.Link>
               <div className="dot position-absolute top-0 start-100 translate-middle"></div>
             </div>
+
             <Button variant="primary"
-              onClick={()=> setShowLogin(true)}
+              onClick={() => setShowLogin(true)}
             >Sign In</Button>
+            
           </div>
         </Navbar.Collapse>
       </Container>

@@ -21,14 +21,14 @@ const {cartItems,addToCart,removeFromCart} =  useContext(StoreContext);
            :<div className='food-item-counter'>
 
               <AddIcon 
-                style={{ fontSize: 25 , color: 'rgb(79, 185, 79)'}}  
+                style={{ fontSize: 20 , color: 'rgb(79, 185, 79)'}}  
                onClick={()=>addToCart(id)}
                />
 
               <p>{cartItems[id]}</p>
 
               <RemoveIcon 
-              style={{ fontSize: 25, color: 'red'}}  
+              style={{ fontSize: 20, color: 'red'}}  
               onClick={()=>removeFromCart(id)} />
 
            </div>

@@ -20,9 +20,13 @@ const StoreContextProvider = (props) =>{
            setCartItems((prev)=> ({...prev,[itemID]:prev[itemID] - 1}))
     }
 
+  // allows you to perform side effects in your components.
 
+ // Some examples of side effects are: fetching data, directly updating the DOM, and timers.
     useEffect(() => {
-       console.log(cartItems);
+        
+        localStorage.setItem('cart-item' , JSON.stringify(cartItems));
+       
     },[cartItems])
     
     const contextValue = {
