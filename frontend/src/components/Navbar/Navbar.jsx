@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Navbar.css';
 import { assets } from '../../assets/assets';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { StoreContext } from '../../context/StoreContext';
 
 const CNavbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("menu");
-
+  const {getTotalCartAmount} = useContext(StoreContext)
   return (
     <Navbar expand="lg" className="bg-body-tertiary pt-0 pb-2" bg="light" data-bs-theme="light">
       <Container fluid>
@@ -61,11 +62,13 @@ const CNavbar = ({ setShowLogin }) => {
 
           <div className="navbar-right d-flex align-items-center">
 
-            <img src={assets.search_icon} alt="" className="me-2" />
+            <img src={assets.search_icon} alt="" className="me-2 mt-2" />
 
             <div className="navbar-search-icon position-relative me-2">
               <Nav.Link href='/cart'><img src={assets.basket_icon} alt="" /></Nav.Link>
-              <div className="dot position-absolute top-0 start-100 translate-middle"></div>
+              <div className= {getTotalCartAmount()=== 0?"" :"dot position-absolute top-0 start-100 translate-middle"}
+                 
+              ></div>
             </div>
 
             <Button variant="primary"

@@ -10,7 +10,7 @@ const CustomFormControl = styled(Form.Control)`
     font-size: 13px; 
   }
 `;
-const Login = ({ setShowLogin }) => {
+const Login = ({setShowLogin}) => {
   const [currState, setCurrState] = useState("Login")
   return (
     <div className='login-popup'>
