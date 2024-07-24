@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState} from 'react'
 import './Cart.css'
 import { StoreContext } from '../../context/StoreContext'
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { Form, Button, Row} from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { useNavigate } from 'react-router-dom';
 
@@ -52,7 +51,7 @@ const Cart = () => {
         })}
       </div>
 
-      <div className='cart-bottom'>
+      <Row className='cart-bottom'>
         <div className='cart-total'>
           <h2>Cart Totals</h2>
           <div>
@@ -77,7 +76,7 @@ const Cart = () => {
           </div>
         </div>
         <div className='cart-promocode'>
-             <div>
+             <Row>
               <p style={{color: 'rgb(85, 84, 84)'}}>If you have a PROMOCODE, enter here</p>
               <InputGroup className="mb-3 w-100" >
                 <Form.Control
@@ -90,7 +89,7 @@ const Cart = () => {
                   Apply
                 </Button>
               </InputGroup>
-            </div> 
+            </Row> 
             {/* <div>
               <p>If you have a  PROMOCODE, enter here</p>
               <div className='cart-promocode-input'>
@@ -99,7 +98,7 @@ const Cart = () => {
               </div>
             </div> */}
           </div>
-      </div>
+      </Row>
     </div>
   )
 }

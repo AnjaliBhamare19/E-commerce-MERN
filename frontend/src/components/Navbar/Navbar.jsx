@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { StoreContext } from '../../context/StoreContext';
 
 const CNavbar = ({ setShowLogin }) => {
-  const [menu, setMenu] = useState("menu");
+  const [menu, setMenu] = useState("home");
   const {getTotalCartAmount} = useContext(StoreContext)
   return (
     <Navbar expand="lg" className="bg-body-tertiary pt-0 pb-2" bg="light" data-bs-theme="light">
@@ -46,8 +46,8 @@ const CNavbar = ({ setShowLogin }) => {
             </Nav.Link>
             <Nav.Link
               href="#"
-              onClick={() => setMenu("about-us")}
-              className={menu === "about-us" ? "active" : ""}
+              onClick={() => setMenu("aboutus")}
+              className={menu === "aboutus" ? "active" : ""}
             >
               About Us
             </Nav.Link>

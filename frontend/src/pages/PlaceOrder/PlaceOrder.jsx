@@ -87,64 +87,62 @@ const PlaceOrder = () => {
     <div className='place-order'>
       <Row className='gx-5'>
         <Col md={8} >
-          <Container>
-            <Row>
-              <Container className="place-Order-left">
-                <h4 className="my-4">Delivery Information</h4>
-                <Form>
-                  <Row className=" mb-3">
-                    <Col md={5} className="mb-3 mb-md-0">
-                      <Form.Control type="text" placeholder="First name" />
-                    </Col>
-                    <Col md={5}>
-                      <Form.Control type="text" placeholder="Last name" />
-                    </Col>
-                  </Row>
+          <Container className="place-Order-left">
+            <h4 className="my-4">Delivery Information</h4>
+            <Form>
+              <Row className=" mb-3">
+                <Col md={6} className="mb-3 mb-md-0">
+                  <Form.Control type="text" placeholder="First name" />
+                </Col>
+                <Col md={6}>
+                  <Form.Control type="text" placeholder="Last name" />
+                </Col>
+              </Row>
 
-                  <Row className=" mb-3">
-                    <Col md={5} className="mb-3 mb-md-0">
-                      <Form.Control type="email" placeholder="Email address" />
-                    </Col>
-                    <Col md={5}>
-                      <Form.Control type="text" placeholder="Street" />
-                    </Col>
-                  </Row>
+              <Row className=" mb-3">
+                <Col md={6} className="mb-3 mb-md-0">
+                  <Form.Control type="email" placeholder="Email address" />
+                </Col>
+                <Col md={6}>
+                  <Form.Control type="text" placeholder="Phone number" />
+                </Col>
+              </Row>
 
-                  <Row className=" mb-3">
-                    <Col md={5} className="mb-3 mb-md-0">
-                      <Form.Control type="text" placeholder="City" />
-                    </Col>
-                    <Col md={5}>
-                      <Form.Control type="text" placeholder="State" />
-                    </Col>
-                  </Row>
+              <Row className=" mb-3">
+                <Col>
+                  <Form.Control type="text" placeholder="Street" />
+                </Col>
+              </Row>
 
-                  <Row className=" mb-3">
-                    <Col md={5} className="mb-3 mb-md-0">
-                      <Form.Control type="number" placeholder="Zip code" />
-                    </Col>
-                    <Col md={5}>
-                      <Form.Control type="text" placeholder="Country" />
-                    </Col>
-                  </Row>
+              <Row className=" mb-3">
+                <Col md={6} className="mb-3 mb-md-0">
+                  <Form.Control type="text" placeholder="City" />
+                </Col>
+                <Col md={6}>
+                  <Form.Control type="text" placeholder="State" />
+                </Col>
+              </Row>
 
-                  <Row className=" mb-3">
-                    <Col md={5}>
-                      <Form.Control type="number" placeholder="Phone number" />
-                    </Col>
-                  </Row>
+              <Row className=" mb-3">
+                <Col md={6} className="mb-3 mb-md-0">
+                  <Form.Control type="number" placeholder="Zip code" />
+                </Col>
+                <Col md={6} >
+                  <Form.Control type="text" placeholder="Country" />
+                </Col>
+              </Row>
 
-                  <Button variant='success' className='rounded-0 mt-3 py-2 px-3' type="submit">
-                    Submit
-                  </Button>
-                </Form>
-              </Container>
-            </Row>
+
+
+              <Button variant='success' className='rounded-0 mt-3 py-2 px-3' type="submit">
+                Submit
+              </Button>
+            </Form>
           </Container>
 
         </Col>
 
-        <Col md={4}>
+        {/* <Col md={4}>
           <div className='place-Order-right'>
             <div className='cart-total mt-4'>
               <h4>Cart Totals</h4>
@@ -169,6 +167,45 @@ const PlaceOrder = () => {
               </div>
             </div>
           </div>
+        </Col> */}
+
+        <Col md={4}>
+          <Container className="place-Order-right">
+            <div className="cart-total mt-4">
+              <h4>Cart Totals</h4>
+              <div>
+                <Row className="cart-total-details mt-2">
+                  <Col>
+                    <p>Subtotal</p>
+                  </Col>
+                  <Col className="text-end">
+                    <p>Rs. {getTotalCartAmount()}</p>
+                  </Col>
+                </Row>
+                <hr />
+                <Row className="cart-total-details">
+                  <Col>
+                    <p>Delivery Fee</p>
+                  </Col>
+                  <Col className="text-end">
+                    <p>Rs. 30</p>
+                  </Col>
+                </Row>
+                <hr />
+                <Row className="cart-total-details">
+                  <Col>
+                    <b>Total</b>
+                  </Col>
+                  <Col className="text-end">
+                    <b>Rs. {getTotalCartAmount() + 30}</b>
+                  </Col>
+                </Row>
+                <Button variant="success" className="rounded-0 mt-4 py-2 px-3">
+                  Proceed To Payment
+                </Button>
+              </div>
+            </div>
+          </Container>
         </Col>
       </Row>
     </div>
