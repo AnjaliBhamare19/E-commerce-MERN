@@ -8,3 +8,12 @@ const port = 4000
 //middleware
 app.use(express.json()) //get the request from the front end to backend that will be passed using the JSON
 app.use(cors())
+
+app.get("/",(req,res)=>{
+    res.send("API Working")
+})
+
+app.listen(port,()=>{
+    console.log(`Server Started on http://localhost:${port}`)
+})
+//-------------basic express server is created-----------------
