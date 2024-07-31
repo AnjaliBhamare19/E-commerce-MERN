@@ -9,3 +9,5 @@ export const connectDB = async() => {
 // .then() = to handle the promise returned by mongoose.connect
 // .catch() = to handle the error
 
+//above is a logic using that we can connect with the database.
+

@@ -34,5 +34,7 @@ const foodSchema = new Schema({
 //It provides an interface for interacting with the database. 
 //Models are responsible for creating, reading, updating, and deleting documents in the database. 
 
-const foodModel = new model("food",foodSchema);
-//
+const foodModel = mongoose.models.food || new model("food",foodSchema);
+//we can create above model only once, when we run this model it will create model again.
+// to solve this one if food model is already there it will be used if it is not there it will create a new model
+export default foodModel;
