@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+  font-family: 'Balsamiq Sans', cursive;
+
+}
+
+body{
+  min-height: 100vh;
+  background-color: #d9ede0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+hr{
+  border: none;
+  height: 1px;
+  background-color: #d9ede0;
+}

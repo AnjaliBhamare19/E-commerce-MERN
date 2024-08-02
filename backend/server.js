@@ -19,6 +19,9 @@ app.use("/api/food",foodRouter); //app.use(): This method is used to apply middl
 //working- When a request is made to a path starting with /api/food, Express will check the routes defined in foodRouter.
 //   For example, if a request is made to GET /api/food, it will match the route defined as foodRouter.get('/') in the foodRouter.
 //Each route handler performs a specific operation (GET all foods, GET a food by ID, POST a new food, PUT to update a food, DELETE a food by ID).
+app.use("/images",express.static('uploads'));
+
+
 
 app.get("/",(req,res)=>{
     res.send("Hey API is Working !!!!")
