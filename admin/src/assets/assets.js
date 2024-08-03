@@ -1,10 +1,13 @@
 import logo from './logo.png'
-import parcel_icon from './parcel_icon.png'
-
+import add_icon from './add-icon.svg'
+import list_icon from './list_icon.svg'
+import order_icon from './orders_icon.svg'
 
 export const assets = {
     logo,
-    parcel_icon
+    add_icon,
+    list_icon,
+    order_icon
 }
 
 //axios = create a network request 
