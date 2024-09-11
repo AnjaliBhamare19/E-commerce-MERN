@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
     filename: (req, file, cb) => {
        return cb(null, `${Date.now()}-${file.originalname}`);
     }
-})
+})//apply validation for png and jpeg
 
 const upload = multer({ storage: storage });
 
@@ -21,6 +21,6 @@ const upload = multer({ storage: storage });
 foodRouter.post("/add",upload.single("image"),addfood)
 //use post method to send the data on server and on the server our data will be processed and after that we will get response. 
 foodRouter.get("/list",listfood);
-foodRouter.post("/remove",removefood);
+foodRouter.delete("/remove",removefood);
 export default foodRouter;
 

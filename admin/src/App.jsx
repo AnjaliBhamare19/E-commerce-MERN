@@ -1,18 +1,12 @@
 import React from 'react';
-import Navbar from './components/ANavbar/Navbar';
-import Sidebar from './components/ASidebar/Sidebar';
 import './App.css'; // Ensure you import your CSS file
+// import ResponsiveDrawer from './components/ASidebar';
+import ANavbar from './components/ANavbar/ANavbar';
 
 const App = () => {
   return (
     <div>
-      <div className='navbar'>
-        <Navbar />
-      </div>
-      <div>
-        <Sidebar />
-      </div>
-
+      <ANavbar />
     </div>
   );
 }
